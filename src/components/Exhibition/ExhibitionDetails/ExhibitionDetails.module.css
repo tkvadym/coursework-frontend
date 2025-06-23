@@ -1,0 +1,245 @@
+/* Стилі для компонента детальної інформації про виставку */
+
+.container {
+  background: var(--bg-card);
+  border-radius: var(--border-radius);
+  padding: var(--spacing-xl);
+  box-shadow: var(--shadow);
+  margin-bottom: var(--spacing-large);
+}
+
+/* Заголовок та категорія */
+.header {
+  margin-bottom: var(--spacing-xl);
+}
+
+.titleSection {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-medium);
+}
+
+.title {
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-xxl);
+  font-weight: 700;
+  color: var(--text-color);
+  margin: 0;
+  line-height: 1.2;
+}
+
+.category {
+  display: inline-block;
+  padding: var(--spacing-small) var(--spacing-medium);
+  border-radius: 20px;
+  font-size: var(--font-size-small);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  align-self: flex-start;
+}
+
+/* Кольори категорій */
+.categoryPainting {
+  background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+  color: white;
+}
+
+.categorySculpture {
+  background: linear-gradient(135deg, #a55eea, #8b5cf6);
+  color: white;
+}
+
+.categoryPhoto {
+  background: linear-gradient(135deg, #26de81, #20bf6b);
+  color: white;
+}
+
+.categoryModern {
+  background: linear-gradient(135deg, #fd79a8, #e84393);
+  color: white;
+}
+
+.categoryClassic {
+  background: linear-gradient(135deg, #fdcb6e, #e17055);
+  color: white;
+}
+
+.categoryGraphics {
+  background: linear-gradient(135deg, #6c5ce7, #a29bfe);
+  color: white;
+}
+
+.categoryInstallation {
+  background: linear-gradient(135deg, #fd79a8, #fdcb6e);
+  color: white;
+}
+
+.categoryMultimedia {
+  background: linear-gradient(135deg, #00b894, #00cec9);
+  color: white;
+}
+
+.categoryFolk {
+  background: linear-gradient(135deg, #e17055, #d63031);
+  color: white;
+}
+
+.categoryDecorative {
+  background: linear-gradient(135deg, #a29bfe, #6c5ce7);
+  color: white;
+}
+
+.categoryDefault {
+  background: linear-gradient(135deg, #b2bec3, #636e72);
+  color: white;
+}
+
+/* Основна інформація */
+.mainInfo {
+  margin-bottom: var(--spacing-xl);
+}
+
+.infoGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-large);
+}
+
+.infoItem {
+  background: rgba(255, 255, 255, 0.5);
+  padding: var(--spacing-large);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-color);
+}
+
+.infoLabel {
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-medium);
+  font-weight: 600;
+  color: var(--text-color);
+  margin: 0 0 var(--spacing-small) 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.infoValue {
+  color: var(--text-color);
+}
+
+/* Дати */
+.dateRange {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-small);
+  margin-bottom: var(--spacing-small);
+  flex-wrap: wrap;
+}
+
+.startDate,
+.endDate {
+  font-size: var(--font-size-medium);
+  font-weight: 500;
+}
+
+.dateSeparator {
+  color: var(--text-light);
+  font-weight: 300;
+}
+
+.duration {
+  font-size: var(--font-size-small);
+  color: var(--text-light);
+  font-style: italic;
+}
+
+/* Місце та організатор */
+.location,
+.organizer {
+  font-size: var(--font-size-medium);
+  font-weight: 500;
+}
+
+/* Опис */
+.description {
+  border-top: 1px solid var(--border-color);
+  padding-top: var(--spacing-large);
+}
+
+.descriptionTitle {
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-large);
+  font-weight: 600;
+  color: var(--text-color);
+  margin: 0 0 var(--spacing-medium) 0;
+}
+
+.descriptionContent {
+  line-height: 1.6;
+}
+
+.detailDescription,
+.shortDescription {
+  font-size: var(--font-size-medium);
+  color: var(--text-color);
+  margin: 0;
+  text-align: justify;
+}
+
+.detailDescription {
+  font-weight: 400;
+}
+
+.shortDescription {
+  font-weight: 500;
+  color: var(--text-light);
+}
+
+/* Адаптивність */
+@media (max-width: 768px) {
+  .container {
+    padding: var(--spacing-large);
+  }
+
+  .title {
+    font-size: var(--font-size-xl);
+  }
+
+  .infoGrid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-medium);
+  }
+
+  .infoItem {
+    padding: var(--spacing-medium);
+  }
+
+  .dateRange {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .dateSeparator {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: var(--spacing-medium);
+  }
+
+  .titleSection {
+    gap: var(--spacing-small);
+  }
+
+  .title {
+    font-size: var(--font-size-large);
+  }
+
+  .category {
+    padding: 6px var(--spacing-small);
+    font-size: 10px;
+  }
+}

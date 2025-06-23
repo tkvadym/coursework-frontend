@@ -1,0 +1,91 @@
+/* Контейнер для спіннера завантаження */
+.loadingContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+/* Базовий спіннер */
+.spinner {
+  border: 3px solid var(--border-color);
+  border-top: 3px solid var(--primary-color);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 1rem;
+}
+
+/* Розміри спіннера */
+.small {
+  width: 24px;
+  height: 24px;
+  border-width: 2px;
+}
+
+.medium {
+  width: 40px;
+  height: 40px;
+  border-width: 3px;
+}
+
+.large {
+  width: 56px;
+  height: 56px;
+  border-width: 4px;
+}
+
+/* Анімація обертання */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Текст завантаження */
+.loadingText {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  margin: 0;
+  font-weight: 400;
+}
+
+/* Адаптивність */
+@media (max-width: 768px) {
+  .loadingContainer {
+    padding: 2rem 1rem;
+  }
+
+  .loadingText {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .loadingContainer {
+    padding: 1.5rem 1rem;
+  }
+
+  .loadingText {
+    font-size: 0.85rem;
+  }
+
+  .small {
+    width: 20px;
+    height: 20px;
+  }
+
+  .medium {
+    width: 32px;
+    height: 32px;
+  }
+
+  .large {
+    width: 48px;
+    height: 48px;
+  }
+}

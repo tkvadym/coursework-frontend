@@ -1,0 +1,145 @@
+/* Стилі для компонента статусу виставки */
+
+.container {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--spacing-small) var(--spacing-medium);
+  border-radius: var(--border-radius);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  min-width: 120px;
+  text-align: center;
+}
+
+.statusMain {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-small);
+  margin-bottom: 2px;
+}
+
+.statusIcon {
+  font-size: 12px;
+  line-height: 1;
+}
+
+.statusText {
+  font-size: var(--font-size-small);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  line-height: 1;
+}
+
+.statusInfo {
+  font-size: 10px;
+  font-weight: 500;
+  opacity: 0.9;
+  line-height: 1.2;
+  margin-top: 2px;
+}
+
+/* Стилі для різних статусів */
+.statusActive {
+  background: linear-gradient(
+    135deg,
+    rgba(46, 204, 113, 0.9),
+    rgba(39, 174, 96, 0.9)
+  );
+  color: white;
+}
+
+.statusActive .statusInfo {
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.statusUpcoming {
+  background: linear-gradient(
+    135deg,
+    rgba(52, 152, 219, 0.9),
+    rgba(41, 128, 185, 0.9)
+  );
+  color: white;
+}
+
+.statusUpcoming .statusInfo {
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.statusCompleted {
+  background: linear-gradient(
+    135deg,
+    rgba(231, 76, 60, 0.9),
+    rgba(192, 57, 43, 0.9)
+  );
+  color: white;
+}
+
+.statusCompleted .statusInfo {
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.statusDefault {
+  background: linear-gradient(
+    135deg,
+    rgba(149, 165, 166, 0.9),
+    rgba(127, 140, 141, 0.9)
+  );
+  color: white;
+}
+
+.statusDefault .statusInfo {
+  color: rgba(255, 255, 255, 0.95);
+}
+
+/* Ефекти при наведенні */
+.container:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+/* Адаптивність */
+@media (max-width: 768px) {
+  .container {
+    padding: 6px var(--spacing-small);
+    min-width: 100px;
+  }
+
+  .statusText {
+    font-size: 10px;
+  }
+
+  .statusInfo {
+    font-size: 9px;
+  }
+
+  .statusIcon {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 4px 8px;
+    min-width: 80px;
+  }
+
+  .statusMain {
+    gap: 4px;
+  }
+
+  .statusText {
+    font-size: 9px;
+  }
+
+  .statusInfo {
+    font-size: 8px;
+  }
+
+  .statusIcon {
+    font-size: 9px;
+  }
+}

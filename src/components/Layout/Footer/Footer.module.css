@@ -1,0 +1,113 @@
+.footer {
+  margin-top: auto;
+  background: var(--bg-header);
+  color: white;
+  border-top: var(--border-width) solid var(--border-color);
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 2;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--spacing-large) var(--spacing-medium);
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--spacing-medium);
+}
+
+.copyright {
+  flex: 1;
+  min-width: 200px;
+}
+
+.copyrightText {
+  font-family: var(--font-family);
+  font-size: var(--font-size-small);
+  margin: 0;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.links {
+  flex: 0 0 auto;
+}
+
+.link {
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  color: white;
+  text-decoration: none;
+  padding: var(--spacing-small) var(--spacing-medium);
+  border-radius: var(--border-radius);
+  transition: all 0.2s ease;
+  border: 1px solid transparent;
+}
+
+.link:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-1px);
+}
+
+.contact {
+  flex: 1;
+  min-width: 200px;
+  text-align: right;
+}
+
+.contactText {
+  font-family: var(--font-family);
+  font-size: var(--font-size-small);
+  margin: 0;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Адаптивність для мобільних пристроїв */
+@media (max-width: 768px) {
+  .container {
+    padding: var(--spacing-medium) var(--spacing-small);
+  }
+
+  .content {
+    flex-direction: column;
+    text-align: center;
+    gap: var(--spacing-small);
+  }
+
+  .contact {
+    text-align: center;
+  }
+
+  .copyrightText,
+  .contactText {
+    font-size: var(--font-size-small);
+  }
+
+  .link {
+    font-size: var(--font-size-small);
+    padding: var(--spacing-small);
+  }
+}
+
+/* Адаптивність для планшетів */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .content {
+    justify-content: space-around;
+  }
+
+  .contact {
+    text-align: center;
+  }
+}
+
+/* Адаптивність для десктопу */
+@media (min-width: 1025px) {
+  .container {
+    padding: var(--spacing-xl) var(--spacing-medium);
+  }
+}

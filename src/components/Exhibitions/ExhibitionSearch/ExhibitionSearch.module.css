@@ -1,0 +1,128 @@
+.searchContainer {
+  background: var(--bg-card);
+  border: var(--border-width) solid var(--border-color);
+  border-radius: var(--border-radius);
+  padding: var(--spacing-large);
+  box-shadow: var(--shadow);
+  transition: box-shadow 0.3s ease;
+}
+
+.searchContainer:hover {
+  box-shadow: var(--shadow-hover);
+}
+
+.componentTitle {
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-large);
+  color: var(--primary-color);
+  margin-bottom: var(--spacing-medium);
+  font-weight: 500;
+  border-bottom: 2px solid var(--accent-color);
+  padding-bottom: var(--spacing-small);
+}
+
+.searchPanel {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-small);
+}
+
+.searchInputWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.searchInput {
+  width: 100%;
+  padding: var(--spacing-medium);
+  border: var(--border-width) solid var(--border-color);
+  border-radius: var(--border-radius);
+  font-family: var(--font-family);
+  font-size: var(--font-size-medium);
+  color: var(--text-color);
+  background: #ffffff;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.searchInput:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(44, 62, 80, 0.1);
+}
+
+.searchInput::placeholder {
+  color: var(--text-light);
+}
+
+.clearButton {
+  position: absolute;
+  right: var(--spacing-medium);
+  background: var(--accent-color);
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 6px 12px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-size-small);
+  font-weight: 500;
+}
+
+.clearButton::before {
+  content: "✕";
+}
+
+.clearButton:hover {
+  background: #c0392b;
+  transform: scale(1.05);
+}
+
+.clearButton:focus {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+.searchInfo {
+  font-size: var(--font-size-small);
+  color: var(--text-light);
+  padding: var(--spacing-small) 0;
+  font-style: italic;
+}
+
+/* Адаптивність */
+@media (max-width: 768px) {
+  .searchContainer {
+    padding: var(--spacing-medium);
+  }
+
+  .componentTitle {
+    font-size: var(--font-size-large);
+  }
+
+  .searchInput {
+    padding: var(--spacing-small) var(--spacing-large) var(--spacing-small)
+      var(--spacing-medium);
+    font-size: var(--font-size-base);
+  }
+
+  .clearButton {
+    right: var(--spacing-small);
+    padding: 4px 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .searchInput {
+    padding: var(--spacing-small) var(--spacing-medium);
+  }
+
+  .clearButton {
+    right: var(--spacing-small);
+    padding: 4px 6px;
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,74 @@
+/* Основні CSS змінні для проекту "Найбільші художні виставки України" */
+
+:root {
+  /* Основні кольори */
+  --primary-color: #2c3e50; /* Темно-синій для кнопок */
+  --accent-color: #5496bc; /* Червоний для акцентів */
+  --text-color: #2c3e50; /* Темний текст */
+  --text-light: #7f8c8d; /* Світлий текст */
+  --border-color: #dee2e6; /* Сірий бордер */
+
+  /* Градієнти для фонів */
+  --bg-main: linear-gradient(
+    135deg,
+    #e8f4f8,
+    #f1f8fc,
+    #ffffff
+  ); /* Основний фон сторінки */
+  --bg-header: linear-gradient(135deg, #2c3e50, #3498db); /* Фон хедера */
+  --bg-card: linear-gradient(145deg, #ffffff, #f8f9fa); /* Фон карточок */
+  --bg-button: linear-gradient(135deg, #2c3e50, #3498db); /* Фон кнопок */
+  --bg-accent: linear-gradient(135deg, #e74c3c, #f39c12); /* Акцентний фон */
+
+  /* Шрифти */
+  --font-family: "Inter", "Roboto", "Segoe UI", Arial, sans-serif;
+  --font-family-heading: "Poppins", "Inter", "Roboto", Arial, sans-serif;
+  --font-size-small: 12px; /* Малий текст */
+  --font-size-base: 14px; /* Основний текст */
+  --font-size-medium: 16px; /* Середній текст */
+  --font-size-large: 18px; /* Великий текст */
+  --font-size-xl: 20px; /* Заголовки */
+  --font-size-xxl: 24px; /* Великі заголовки */
+
+  /* Відступи */
+  --spacing-small: 8px;
+  --spacing-medium: 16px;
+  --spacing-large: 24px;
+  --spacing-xl: 32px;
+
+  /* Бордери */
+  --border-radius: 8px;
+  --border-width: 1px;
+
+  /* Тіні */
+  --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  --shadow-hover: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Адаптивність */
+/* Мобільні пристрої */
+@media (max-width: 768px) {
+  :root {
+    --font-size-base: 14px;
+    --font-size-medium: 15px;
+    --font-size-large: 16px;
+    --font-size-xl: 18px;
+    --font-size-xxl: 20px;
+  }
+}
+
+/* Планшети */
+@media (min-width: 769px) and (max-width: 1024px) {
+  :root {
+    --font-size-base: 14px;
+    --font-size-xxl: 22px;
+  }
+}
+
+/* Десктоп */
+@media (min-width: 1025px) {
+  :root {
+    --font-size-base: 14px;
+    --font-size-xxl: 24px;
+  }
+}

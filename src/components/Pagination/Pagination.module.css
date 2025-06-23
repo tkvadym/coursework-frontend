@@ -1,0 +1,144 @@
+.paginationContainer {
+  margin: var(--spacing-large) 0;
+  margin-top: 0;
+  padding: var(--spacing-medium);
+  background: var(--bg-card);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  border: var(--border-width) solid var(--border-color);
+}
+
+.componentTitle {
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-large);
+  color: var(--text-color);
+  margin: 0 0 var(--spacing-medium) 0;
+  font-weight: 600;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-small);
+  margin-bottom: var(--spacing-medium);
+}
+
+.paginationButton {
+  padding: var(--spacing-small) var(--spacing-medium);
+  background: var(--bg-button);
+  color: white;
+  border: none;
+  border-radius: var(--border-radius);
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 100px;
+}
+
+.paginationButton:hover:not(.disabled) {
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-1px);
+}
+
+.paginationButton.disabled {
+  background: var(--text-light);
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.pageNumbers {
+  display: flex;
+  gap: var(--spacing-small);
+}
+
+.pageButton {
+  width: 40px;
+  height: 40px;
+  border: var(--border-width) solid var(--border-color);
+  background: white;
+  color: var(--text-color);
+  border-radius: var(--border-radius);
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pageButton:hover {
+  background: var(--primary-color);
+  color: white;
+  border-color: var(--primary-color);
+  box-shadow: var(--shadow);
+}
+
+.pageButtonActive {
+  background: var(--bg-accent);
+  color: white;
+  border-color: var(--accent-color);
+  box-shadow: var(--shadow);
+}
+
+.pageButtonActive:hover {
+  background: var(--bg-accent);
+  color: white;
+}
+
+.paginationInfo {
+  text-align: center;
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  color: var(--text-light);
+  margin: 0;
+}
+
+.itemsInfo {
+  margin-left: var(--spacing-small);
+  font-size: var(--font-size-small);
+  color: var(--text-light);
+}
+
+/* Адаптивність для мобільних пристроїв */
+@media (max-width: 768px) {
+  .pagination {
+    flex-direction: column;
+    gap: var(--spacing-medium);
+  }
+
+  .paginationButton {
+    min-width: 120px;
+    padding: var(--spacing-medium);
+  }
+
+  .pageNumbers {
+    order: -1;
+  }
+
+  .pageButton {
+    width: 35px;
+    height: 35px;
+    font-size: var(--font-size-small);
+  }
+
+  .componentTitle {
+    font-size: var(--font-size-medium);
+    text-align: center;
+  }
+
+  .paginationInfo {
+    font-size: var(--font-size-small);
+  }
+}
+
+/* Планшети */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .paginationButton {
+    min-width: 90px;
+  }
+}

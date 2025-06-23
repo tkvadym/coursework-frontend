@@ -1,0 +1,132 @@
+/* Стилі для головної сторінки */
+
+.container {
+  min-height: 100vh;
+  background: transparent; /* Прозорий фон, щоб емоджі були видні */
+  padding: var(--spacing-large) var(--spacing-medium);
+}
+
+.content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Заголовок сторінки */
+.header {
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+  background: var(--bg-card);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  padding: var(--spacing-xl);
+}
+
+.title {
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-xxl);
+  color: var(--primary-color);
+  margin-bottom: var(--spacing-medium);
+  font-weight: 600;
+}
+
+.subtitle {
+  font-family: var(--font-family);
+  font-size: var(--font-size-large);
+  color: var(--text-light);
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Секція контролів */
+.controlsSection {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-large);
+  margin-bottom: var(--spacing-xl);
+}
+
+.componentTitle {
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-large);
+  color: var(--primary-color);
+  margin-bottom: var(--spacing-medium);
+  font-weight: 500;
+  border-bottom: 2px solid var(--accent-color);
+  padding-bottom: var(--spacing-small);
+}
+
+/* Основний контент */
+.mainContent {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xl);
+}
+
+/* Адаптивність */
+@media (max-width: 768px) {
+  .container {
+    padding: var(--spacing-medium) var(--spacing-small);
+  }
+
+  .header {
+    padding: var(--spacing-large);
+  }
+
+  .title {
+    font-size: var(--font-size-xl);
+  }
+
+  .subtitle {
+    font-size: var(--font-size-medium);
+  }
+
+  .controlsSection {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-medium);
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    padding: var(--spacing-medium);
+  }
+
+  .title {
+    font-size: var(--font-size-large);
+  }
+
+  .subtitle {
+    font-size: var(--font-size-base);
+  }
+}
+
+/* Стилі для відображення помилок */
+.error {
+  background-color: #fee;
+  border: 1px solid #fcc;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  color: #c33;
+  margin-bottom: var(--spacing-large);
+}
+
+.error p {
+  margin: 0 0 1rem 0;
+  font-weight: 500;
+}
+
+.retryButton {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.retryButton:hover {
+  background-color: var(--primary-dark);
+}

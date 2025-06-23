@@ -1,0 +1,71 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: var(--bg-header);
+  box-shadow: var(--shadow);
+  border-bottom: var(--border-width) solid var(--border-color);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-medium);
+  display: flex;
+  align-items: center;
+  height: 70px;
+}
+
+.logo {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  outline: none;
+  border-radius: var(--border-radius);
+  padding: var(--spacing-small);
+}
+
+.logo:hover {
+  transform: translateY(-2px);
+}
+
+.logoText {
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  color: white;
+  margin: 0;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  letter-spacing: -0.5px;
+}
+
+/* Адаптивність для мобільних пристроїв */
+@media (max-width: 768px) {
+  .container {
+    height: 60px;
+    padding: 0 var(--spacing-small);
+  }
+
+  .logoText {
+    font-size: var(--font-size-large);
+  }
+}
+
+/* Адаптивність для планшетів */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .container {
+    height: 65px;
+  }
+
+  .logoText {
+    font-size: var(--font-size-xl);
+  }
+}
+
+/* Адаптивність для десктопу */
+@media (min-width: 1025px) {
+  .logoText {
+    font-size: var(--font-size-xxl);
+  }
+}

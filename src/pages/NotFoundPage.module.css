@@ -1,0 +1,155 @@
+/* Стилі для сторінки 404 */
+
+.container {
+  min-height: 100vh;
+  background: var(--bg-main);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-large) var(--spacing-medium);
+}
+
+.content {
+  max-width: 600px;
+  text-align: center;
+  background: var(--bg-card);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  padding: var(--spacing-xl);
+}
+
+.errorCode {
+  font-family: var(--font-family-heading);
+  font-size: 120px;
+  font-weight: 700;
+  color: var(--accent-color);
+  line-height: 1;
+  margin-bottom: var(--spacing-medium);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-xxl);
+  color: var(--primary-color);
+  margin-bottom: var(--spacing-large);
+  font-weight: 600;
+}
+
+.message {
+  font-family: var(--font-family);
+  font-size: var(--font-size-medium);
+  color: var(--text-color);
+  line-height: 1.6;
+  margin-bottom: var(--spacing-medium);
+}
+
+.suggestion {
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  color: var(--text-light);
+  line-height: 1.5;
+  margin-bottom: var(--spacing-xl);
+}
+
+.actions {
+  display: flex;
+  gap: var(--spacing-medium);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.homeButton {
+  display: inline-block;
+  background: var(--bg-button);
+  color: white;
+  text-decoration: none;
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  font-weight: 500;
+  padding: var(--spacing-medium) var(--spacing-large);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.homeButton:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-hover);
+  text-decoration: none;
+  color: white;
+}
+
+.backButton {
+  background: transparent;
+  color: var(--primary-color);
+  border: var(--border-width) solid var(--primary-color);
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  font-weight: 500;
+  padding: var(--spacing-medium) var(--spacing-large);
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.backButton:hover {
+  background: var(--primary-color);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+
+/* Адаптивність */
+@media (max-width: 768px) {
+  .container {
+    padding: var(--spacing-medium) var(--spacing-small);
+  }
+
+  .content {
+    padding: var(--spacing-large);
+  }
+
+  .errorCode {
+    font-size: 80px;
+  }
+
+  .title {
+    font-size: var(--font-size-xl);
+  }
+
+  .actions {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .homeButton,
+  .backButton {
+    width: 100%;
+    max-width: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .content {
+    padding: var(--spacing-medium);
+  }
+
+  .errorCode {
+    font-size: 60px;
+  }
+
+  .title {
+    font-size: var(--font-size-large);
+  }
+
+  .message {
+    font-size: var(--font-size-base);
+  }
+
+  .suggestion {
+    font-size: var(--font-size-small);
+  }
+}
